@@ -8,17 +8,11 @@ $(function() {
     var bookInput = $("#book-input").val();
     var instrumentInput = $("#instrument-input").val();
 
-    // console.log(movieInput, bandInput, bookInput, instrumentInput);
-
     function addFavoriteThings() {
       favoriteThingsArray.push(movieInput, bandInput, bookInput, instrumentInput);
-
       console.log(favoriteThingsArray);
-
       return favoriteThingsArray;
     }
-
-    addFavoriteThings();
 
     function addToNewArray() {
       var newArray = [];
@@ -27,12 +21,11 @@ $(function() {
       var thirdFavoriteItem = favoriteThingsArray[2];
 
       newArray.push(secondFavoriteItem, firstFavoriteItem, thirdFavoriteItem);
-
       console.log(newArray);
-
       return newArray;
     }
 
+    addFavoriteThings();
     addToNewArray();
 
     $("#favorite-things-list").append("<li>" + favoriteThingsArray[0] + "</li>", "<li>" + favoriteThingsArray[1] + "</li>", "<li>" + favoriteThingsArray[2] + "</li>");
